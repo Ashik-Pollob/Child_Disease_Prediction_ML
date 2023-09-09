@@ -19,10 +19,10 @@ AriData<-Data %>%dplyr:: select(Division, Residence, Wealth, F_Edu, M_Edu, F_Job
 # Splitting
 set.seed(11)
 index <- sample(1:nrow(AriData),round(0.80*nrow(AriData)))
-train <- AriData[index,]
-test <- AriData[-index,]
-levels(train$ch_ari) <- c("Yes", "No")
-levels(test$ch_ari) <- c("Yes", "No")
+ari.train <- AriData[index,]
+ari.test <- AriData[-index,]
+levels(ari.train$ch_ari) <- c("Yes", "No")
+levels(ari.test$ch_ari) <- c("Yes", "No")
 
 
 
@@ -34,10 +34,10 @@ StData<-Data %>%dplyr:: select(Division, Residence, Wealth, F_Edu, M_Edu, F_Job,
 # Splitting
 set.seed(11)
 index <- sample(1:nrow(StData),round(0.80*nrow(StData)))
-train <- StData[index,]
-test <- StData[-index,]
-levels(train$nt_ch_stunt) <- c("Yes", "No")
-levels(test$nt_ch_stunt) <- c("Yes", "No")
+stn.train <- StData[index,]
+stn.test <- StData[-index,]
+levels(stn.train$nt_ch_stunt) <- c("Yes", "No")
+levels(stn.test$nt_ch_stunt) <- c("Yes", "No")
 
 
 
@@ -49,10 +49,10 @@ WstData<-Data %>%dplyr:: select(Division, Residence, Wealth, F_Edu, M_Edu, F_Job
 # Splitting
 set.seed(11)
 index <- sample(1:nrow(WstData),round(0.80*nrow(WstData)))
-train <- WstData[index,]
-test <- WstData[-index,]
-levels(train$nt_ch_wast) <- c("Yes", "No")
-levels(test$nt_ch_wast) <- c("Yes", "No")
+wst.train <- WstData[index,]
+wst.test <- WstData[-index,]
+levels(wst.train$nt_ch_wast) <- c("Yes", "No")
+levels(wst.test$nt_ch_wast) <- c("Yes", "No")
 
 
 
@@ -64,10 +64,10 @@ UwtData<-Data %>%dplyr:: select(Division, Residence, Wealth, F_Edu, M_Edu, F_Job
 # Splitting
 set.seed(11)
 index <- sample(1:nrow(UwtData),round(0.80*nrow(UwtData)))
-train <- UwtData[index,]
-test <- UwtData[-index,]
-levels(train$nt_ch_underwt) <- c("Yes", "No")
-levels(test$nt_ch_underwt) <- c("Yes", "No")
+und.train <- UwtData[index,]
+und.test <- UwtData[-index,]
+levels(und.train$nt_ch_underwt) <- c("Yes", "No")
+levels(und.test$nt_ch_underwt) <- c("Yes", "No")
 
 
 
@@ -79,8 +79,8 @@ DiarData<-Data %>%dplyr:: select(Division, Residence, Wealth, F_Edu, M_Edu, F_Jo
 # Splitting
 set.seed(11)
 index <- sample(1:nrow(DiarData),round(0.80*nrow(DiarData)))
-train <- DiarData[index,]
-test <- DiarData[-index,]
-levels(train$ch_diar) <- c("Yes", "No")
-levels(test$ch_diar) <- c("Yes", "No")
+dia.train <- DiarData[index,]
+dia.test <- DiarData[-index,]
+levels(dia.train$ch_diar) <- c("Yes", "No")
+levels(dia.test$ch_diar) <- c("Yes", "No")
 
