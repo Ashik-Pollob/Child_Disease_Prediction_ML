@@ -4,9 +4,6 @@ Author: "S.M. Ashikul Islam Pollob"
 Date: "16-09-2023"
 ---
 
-# libraries needed
-library(pROC)
-
 
 # Logistic Regression
 Lr <- train(ch_ari ~ ., 
